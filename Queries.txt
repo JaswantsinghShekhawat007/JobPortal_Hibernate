@@ -1,0 +1,24 @@
+create database job_portal_db;
+
+
+use job_portal_db;
+
+
+create table userlogin(userid varchar(20) primary key,password varchar(20) not 
+null,usertype varchar(10) not null);
+
+
+create table userdata(userid varchar(20),foreign key(userid) references 
+userlogin(userid),name varchar(50) not null,email varchar(50) 
+unique,secquestion varchar(100),secans varchar(100));
+
+
+create table job(jobid varchar(30) primary key,companyuserid 
+varchar(20),foreign key(companyuserid) references userlogin(userid),issuedate 
+date not null,skill varchar(50) not null,location varchar(80) not 
+null,pacperanum int not null,availablestat varchar(20) default "yes");
+
+
+create table jobapplied(jobappid varchar(50) primary key,candidateuserid 
+varchar(20),companyuserid varchar(20),jobid varchar(30),foreign key(jobid) 
+references job(jobid),applydate date not null)

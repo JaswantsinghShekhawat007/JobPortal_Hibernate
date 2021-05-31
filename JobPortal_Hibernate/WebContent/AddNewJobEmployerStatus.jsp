@@ -21,7 +21,7 @@ New Job Added Successfully....<br>
 	else
 	{
 		%>
-		Their  is something wrong please Try Again...<br>
+		There  is something wrong please Try Again...<br>
 		<a href="Employer.jsp">Home</a>
 		<%
 	}

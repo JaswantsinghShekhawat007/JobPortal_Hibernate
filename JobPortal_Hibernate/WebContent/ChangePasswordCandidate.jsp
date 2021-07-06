@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Change Password</title>
 <script language="Javascript" type="text/javascript">
 function verifypassword() {
 	 pw = document.frm.newpswd.value;
